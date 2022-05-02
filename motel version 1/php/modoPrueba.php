@@ -8,7 +8,7 @@ $updateModoPruebaSql="UPDATE `habitaciones` SET `modoPrueba`=0 WHERE `habitacion
 $executeModoPrueba=$conexion->prepare($updateModoPruebaSql);
 $executeModoPrueba->bindParam(":id",$_GET['id']);
 if ($executeModoPrueba->execute()) {
-    echo json_encode("perfecto")
+    echo json_encode("perfecto");
 }
 
 

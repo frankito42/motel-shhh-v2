@@ -213,8 +213,12 @@ if (isset($_SESSION['yaTieneTarjeta'])) {
 
     <!-- Section heading -->
     <h2 style="font-size:50px; color:white;" class="font-weight-bold mb-4 pb-2 text-uppercase"><?php echo $habitacion['nombre']?> <button data-toggle="modal" data-target="#techo" class="btn btn-pink">Techo</button>
-    <a data-toggle="modal" data-target="#modalHerramienta"  class="btn-blue btn">Arduino modo prueba</a></h2>
-
+    <a data-toggle="modal" data-target="#modalHerramienta"  class="btn-blue btn">Arduino prueba</a>
+    <a type="button" style="background: gray;" class="btn" data-toggle="modal" data-target="#config">
+  opciones
+</a>
+  </h2>
+   
   </h2>
     <!-- Section description -->
     <!-- Grid row -->
@@ -514,7 +518,7 @@ li:hover{
   <div class="modal-dialog" role="document">
     <div style="background:#dee2e6;" class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" style="" id="exampleModalPreviewLabel">CAMBIAR COLO DE TECHOS</h5>
+        <h5 class="modal-title"  id="exampleModalPreviewLabel">CAMBIAR COLO DE TECHOS</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -589,6 +593,41 @@ li:hover{
 <!-- //////////////////////////////////////////////////////////////////////// -->
 <!-- //////////////////////////////////////////////////////////////////////// -->
 <!-- //////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="config" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div style="background: #dddde4;" class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Opciones adicionales</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <a href="opciones/interesTarjetaHabit.php?habitacionIPtabelt=<?php echo $habitacion['ip_tablet']."&idMovtemp=".$movtem['id']."&total=".round($totalHABITACION)."&id=".$_GET['id']?>" class="btn btn-success">interes tarjeta</a>
+      <p>Importe sin interes: <?php echo round($totalHABITACION)?></p>
+      <p>Importe con 10% de interes: <?php echo round($totalHABITACION)*0.10+round($totalHABITACION)?></p>
+      </div>
+      <div class="modal-footer">
+        <butt
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- //////////////////////////////////////////////////////////////////////// -->
 <!-- //////////////////////////////////////////////////////////////////////// -->
 <!-- //////////////////////////////////////////////////////////////////////// -->
